@@ -1,12 +1,7 @@
 ﻿using Microsoft.Toolkit.Uwp.UI.Animations;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,15 +19,35 @@ namespace _200201_MY_YellowLead_UWP
     /// </summary>
     public sealed partial class ScreenSaver : Page
     {
+        [DllImport("user32.dll")]
+        public static extern void SwitchToThisWindow(IntPtr hWnd, bool turnon);
+
+        [DllImport("user32.dll")]
+        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+
+        [DllImport("user32.dll")]
+        static extern IntPtr GetActiveWindow();
+
         public ScreenSaver()
         {
             this.InitializeComponent();
             FadeAnimations();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(WebViewPage));
+            if(Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent("Windows.ApplicationModel.FullTrustAppContract", 1, 0))
+                await Windows.ApplicationModel.FullTrustProcessLauncher.
+                    LaunchFullTrustProcessForCurrentAppAsync();
+
+             
+           // @"C:\UID_TestProject\AppToFrontConsole\AppToFrontConsole.exe";
+
+                // System.Threading.Thread.Sleep(1000);
+                // p.WaitForInputIdle();
+                //  SetParent(p.MainWindowHandle, GetActiveWindow());
+
+                // Frame.Navigate(typeof(WebViewPage));
         }
 
         private async void FadeAnimations()

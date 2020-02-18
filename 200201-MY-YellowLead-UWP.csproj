@@ -127,10 +127,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage.xaml.cs">
-      <DependentUpon>AdminPage.xaml</DependentUpon>
+    <Compile Include="Pages\CollectSample.xaml.cs">
+      <DependentUpon>CollectSample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WebViewPage.xaml.cs">
+    <Compile Include="Pages\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SampleDrop.xaml.cs">
+      <DependentUpon>SampleDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebViewPage.xaml.cs">
       <DependentUpon>WebViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ScreenSaver.xaml.cs">
@@ -143,6 +149,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppToFrontConsole.exe" />
     <Content Include="Assets\h1.jpg" />
     <Content Include="Assets\h2.jpg" />
     <Content Include="Assets\h3.jpg" />
@@ -152,6 +159,10 @@
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\ScreenSaver_1%28Loop%29.gif" />
+    <Content Include="Assets\ScreenSaver_1.gif" />
+    <Content Include="Assets\ScreenSaver_2%28Loop%29.gif" />
+    <Content Include="Assets\ScreenSaver_2.gif" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -197,20 +208,30 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Mono.Data.Sqlite.dll" />
-    <Content Include="Newtonsoft.Json.dll" />
-    <Content Include="sqlite3.dll" />
+    <Content Include="Assets\Win%28Loop%29.gif" />
+    <Content Include="Assets\Win.gif" />
+    <Content Include="Plugin\Mono.Data.Sqlite.dll" />
+    <Content Include="Plugin\Newtonsoft.Json.dll" />
+    <Content Include="Plugin\sqlite3.dll" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AdminPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Pages\CollectSample.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WebViewPage.xaml">
+    <Page Include="Pages\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SampleDrop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WebViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -237,7 +258,14 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="General\Scripts\" />
     <Folder Include="Properties\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsDesktop, Version=10.0.18362.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

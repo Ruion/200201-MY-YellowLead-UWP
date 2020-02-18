@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="_200201_MY_YellowLead_UWP.CollectSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:_200201_MY_YellowLead_UWP"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="1080"
+    Height="1920"
+    Background="White"
+    mc:Ignorable="d">
+
+    <Grid Width="1080" Height="1920">
+        <Button
+            x:Name="collectButton"
+            Width="800"
+            Height="168"
+            Margin="0,1240,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#FF651693"
+            Content="COLLECT SAMPLE"
+            CornerRadius="30"
+            FontSize="66"
+            FontWeight="Bold" />
+    </Grid>
+</Page>
