@@ -40,5 +40,10 @@ namespace _200201_MY_YellowLead_UWP
             PediasureWebview.Visibility = Visibility.Collapsed;
             WebViewExit.Visibility = Visibility.Collapsed;
         }
+
+        private void Sample_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Registration));
+        }
     }
 }

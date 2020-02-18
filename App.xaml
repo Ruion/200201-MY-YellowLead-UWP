@@ -90,9 +90,15 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
         <ControlTemplate x:Key="ButtonClick" TargetType="Button">
+            
             <Grid />
         </ControlTemplate>
+
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Black" Opacity="0"/>
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="Black"/>
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="White" Opacity="0"/>
     </Application.Resources>
 
 </Application>

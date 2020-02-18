@@ -14,52 +14,42 @@
         x:Name="ScreenSaver"
         Width="1080"
         Height="1920">
-
-        <Image
-            Margin="-183,-128,183,128"
-            RenderTransformOrigin="0.5,0.5"
-            Source="/Assets/h2.jpg">
-            <Image.RenderTransform>
-                <CompositeTransform ScaleX="0.2" ScaleY="0.2" />
-            </Image.RenderTransform>
-        </Image>
-        <Image
-            Margin="200,-128,-200,128"
-            RenderTransformOrigin="0.5,0.5"
-            Source="/Assets/h2.jpg">
-            <Image.RenderTransform>
-                <CompositeTransform ScaleX="0.2" ScaleY="0.2" />
-            </Image.RenderTransform>
-        </Image>
+        <Image Source="/Images/BG.jpg" VerticalAlignment="Bottom" />
+        <Image Source="/Images/Footer/Footer.png" VerticalAlignment="Bottom" />
         <Button
             x:Name="HeightPredictor"
-            Width="215"
-            Height="216"
-            Margin="249,724,0,0"
+            Width="349"
+            Height="352"
+            Margin="182,656,0,0"
             VerticalAlignment="Top"
             Background="#02CC56DE"
-            Click="HeightPredictor_Click"
-            Content="" />
+            Click="HeightPredictor_Click" >
+            <Image HorizontalAlignment="Center" Height="317" VerticalAlignment="Center" Width="317" Source="/Images/But_FreeSample.png"/>
+        </Button>
+        <TextBlock Foreground="#FF5C0B88" Text="FREE SAMPLE" FontSize="27" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="633,984,0,0" FontFamily="Verdana" FontWeight="Bold" />
+        <TextBlock Foreground="#FF5C0B88" Text="HEIGHT PREDICTOR" FontSize="27" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="199,984,0,0" FontFamily="Verdana" FontWeight="Bold" />
         <Button
             x:Name="Sample"
-            Width="216"
-            Height="216"
-            Margin="632,724,0,0"
+            Width="352"
+            Height="352"
+            Margin="564,656,0,0"
             VerticalAlignment="Top"
             Background="#02E84D4D"
-            Click="HeightPredictor_Click"
-            Content="Sample"
+            Click="Sample_Click"
             FocusVisualPrimaryBrush="#02FFFFFF"
-            Foreground="Transparent" />
+            Foreground="#FF5C0B88" FontSize="30" FontWeight="Bold">
+            <Image HorizontalAlignment="Center" Height="322" VerticalAlignment="Center" Width="322" Source="/Images/But_FreeSample.png"/>
+        </Button>
         <WebView x:Name="PediasureWebview" Visibility="Collapsed" />
         <Button
             x:Name="WebViewExit"
-            Width="130"
-            Height="126"
-            Margin="155,412,0,0"
+            Width="168"
+            Height="162"
+            Margin="114,290,0,0"
             VerticalAlignment="Top"
-            Click="WebViewExit_Click"
-            Content="Exit Webview" />
+            Click="WebViewExit_Click" Background="{x:Null}" Visibility="Collapsed" >
+            <Image x:Name="BackButton" HorizontalAlignment="Center" Height="145" VerticalAlignment="Center" Width="144" Source="/Images/But_FreeSample.png"/>
+        </Button>
 
 
     </Grid>
