@@ -136,8 +136,8 @@
     <Compile Include="Pages\SampleDrop.xaml.cs">
       <DependentUpon>SampleDrop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebViewPage.xaml.cs">
-      <DependentUpon>WebViewPage.xaml</DependentUpon>
+    <Compile Include="Pages\Questions.xaml.cs">
+      <DependentUpon>Questions.xaml</DependentUpon>
     </Compile>
     <Compile Include="ScreenSaver.xaml.cs">
       <DependentUpon>ScreenSaver.xaml</DependentUpon>
@@ -236,6 +236,8 @@
     <Content Include="Images\Footer\Question_1.png" />
     <Content Include="Images\Footer\Question_2.png" />
     <Content Include="Images\Footer\Question_3.png" />
+    <Content Include="Images\GreenCircle.png" />
+    <Content Include="Images\Header\PediasureLogo.png" />
     <Content Include="Images\Img_Question3.png" />
     <Content Include="Images\Img_Question3_1.png" />
     <Content Include="Images\Img_Question3_2.png" />
@@ -271,9 +273,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\WebViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Pages\Questions.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ScreenSaver.xaml">
       <SubType>Designer</SubType>

@@ -65,8 +65,8 @@ namespace _200201_MY_YellowLead_UWP
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
             // if checkbox and field is validate
-            if (nameValid == true && emailValid == true &&
-                contactValid == true && checkboxValid == true) 
+            if ((nameValid == true) && (emailValid == true) &&
+                 (contactValid == true) && (checkboxValid == true))
             {
                 Frame.Navigate(typeof(SampleDrop));
             }
@@ -75,27 +75,31 @@ namespace _200201_MY_YellowLead_UWP
 
         private void ButtonHandler()
         {
-            if (nameValid == true && emailValid == true &&
-                contactValid == true && checkboxValid == true)
-            {
-                submitButton.Background.Opacity = 100;
-            }
-            else
-            {
-                submitButton.Background.Opacity = 50;
-            }
+             submitButton.Visibility = Visibility.Collapsed;
+           // submitButton.Opacity = 50;
+
+            if (nameValid == true)
+                if (emailValid == true)
+                    if (contactValid == true)
+                        if (checkboxValid == true)
+                        {  
+                            submitButton.Visibility = Visibility.Visible;
+                           // submitButton.Opacity = 100;
+                        }
+
         }
 
         private void checkbox_Click(object sender, RoutedEventArgs e)
         {
             checkboxValid = !checkboxValid;
 
-            if (checkboxValid)
+            if (checkboxValid == true)
             {
                 checkboxBackground.Visibility = Visibility.Visible;
             }else
                 checkboxBackground.Visibility = Visibility.Collapsed;
 
+            ButtonHandler();
         }
     }
 }

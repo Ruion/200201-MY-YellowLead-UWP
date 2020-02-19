@@ -11,14 +11,15 @@
     mc:Ignorable="d">
 
     <Grid Width="1080" Height="1920">
-        <Image Source="/Images/BG.jpg" VerticalAlignment="Bottom" />
-        <Image Source="/Images/Footer/Footer.png" VerticalAlignment="Bottom" />
-        <Image Source="/Images/Text/Collect_Sample.png" Margin="62,291,62,1319"/>
+        <Image VerticalAlignment="Bottom" Source="/Images/BG.jpg" />
+        <Image VerticalAlignment="Bottom" Source="/Images/Footer/Footer.png" />
+        <Image Margin="62,291,62,1319" Source="/Images/Text/Collect_Sample.png" />
         <Image
             Width="260"
             Height="1060"
+            Margin="0,601,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Source="/Assets/Win(Loop).gif" Margin="0,601,0,0" />
+            Source="/Assets/Win(Loop).gif" />
     </Grid>
 </Page>

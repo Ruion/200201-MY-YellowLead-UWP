@@ -56,7 +56,7 @@ namespace _200201_MY_YellowLead_UWP
 
             H1.Fade(value: 0f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
             H2.Fade(value: 1f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-
+            
             await Task.Delay(4000);
 
             H2.Fade(value: 0f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
