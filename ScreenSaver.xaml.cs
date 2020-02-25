@@ -2,6 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using Windows.Media.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,43 +32,48 @@ namespace _200201_MY_YellowLead_UWP
         public ScreenSaver()
         {
             this.InitializeComponent();
-            FadeAnimations();
+
+            AnimateButton();
+        }
+
+        private async void AnimateButton()
+        {
+            if (!NextButton.IsEnabled) return;
+
+            NextButton.Scale(scaleX: 1.2f, scaleY: 1.2f, centerX: 0, centerY: 0, duration: 500, delay: 0, easingType: EasingType.Default).Start();
+
+            if (!NextButton.IsEnabled) return;
+
+            await Task.Delay(500);
+
+            if (!NextButton.IsEnabled) return;
+
+            NextButton.Scale(scaleX: 1, scaleY: 1, centerX: 0, centerY: 0, duration: 500, delay: 0, easingType: EasingType.Default).Start();
+
+            if (!NextButton.IsEnabled) return;
+
+            await Task.Delay(500);
+
+            AnimateButton();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent("Windows.ApplicationModel.FullTrustAppContract", 1, 0))
-                await Windows.ApplicationModel.FullTrustProcessLauncher.
-                    LaunchFullTrustProcessForCurrentAppAsync();
+            NextButton.IsEnabled = false;
 
-             
-           // @"C:\UID_TestProject\AppToFrontConsole\AppToFrontConsole.exe";
+            Click.Play();
 
-                // System.Threading.Thread.Sleep(1000);
-                // p.WaitForInputIdle();
-                //  SetParent(p.MainWindowHandle, GetActiveWindow());
 
-                // Frame.Navigate(typeof(WebViewPage));
-        }
+            NextButton.Scale(scaleX: 1.3f, scaleY: 1.3f, centerX: 0, centerY: 0, duration: 200, delay: 0, easingType: EasingType.Default).Start();
 
-        private async void FadeAnimations()
-        {
-            await Task.Delay(4000);
+            await System.Threading.Tasks.Task.Delay(200);
 
-            H1.Fade(value: 0f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-            H2.Fade(value: 1f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
+            NextButton.Scale(scaleX: 1, scaleY: 1f, centerX: 0, centerY: 0, duration: 200, delay: 0, easingType: EasingType.Default).Start();
+
+            await Task.Delay(1600);
+
+             Frame.Navigate(typeof(Registration));
             
-            await Task.Delay(4000);
-
-            H2.Fade(value: 0f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-            H3.Fade(value: 1f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-
-            await Task.Delay(4000);
-
-            H3.Fade(value: 0f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-            H1.Fade(value: 1f, duration: 1100, delay: 0, easingType: EasingType.Default).Start();
-
-            FadeAnimations();
         }
     }
 }

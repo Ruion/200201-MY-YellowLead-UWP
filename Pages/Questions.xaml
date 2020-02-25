@@ -10,22 +10,40 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Width="1080" Height="1920">
-        <Image VerticalAlignment="Top" Source="/Images/BG.jpg" />
+    <Grid
+        Width="1080"
+        Height="1920"
+        Background="White">
         <Image
-            Margin="0,1427,0,0"
-            VerticalAlignment="Top"
+            Height="1954"
+            Margin="-9,0,-9,0"
+            VerticalAlignment="Center"
+            Source="/Images/BG.jpg" />
+        <Image
+            Width="1100"
+            Height="502"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
             Source="/Images/Footer/Footer.png" />
 
-        <Grid
-            x:Name="Question1"
-            Opacity="0.998"
-            Visibility="Visible">
+        <Grid x:Name="Question1" Visibility="Visible">
+
             <Image
                 x:Name="Question1Correct"
-                Margin="571,727,102,727"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderTransformOrigin="0.5,0.5"
                 Source="/Images/GreenCircle.png"
-                Visibility="Collapsed" />
+                Visibility="Collapsed">
+                <Image.RenderTransform>
+                    <CompositeTransform
+                        ScaleX="0.4"
+                        ScaleY="0.4"
+                        TranslateX="250" />
+                </Image.RenderTransform>
+            </Image>
+            <Image Margin="112,775,938,1093" Source="/Images/Questions/A.png" />
+            <Image Margin="546,779,435,1107" Source="/Images/Questions/B.png" />
             <Image
                 Width="829"
                 Height="359"
@@ -33,150 +51,307 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Source="/Images/Text/Question_1.png" />
-            <Button
-                Width="466"
-                Height="469"
-                Margin="57,0,0,0"
-                Background="{x:Null}"
-                Click="Button_Click_1"
-                Foreground="{x:Null}">
-                <Image
-                    Width="428"
-                    Height="472"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_1(a).png" />
-            </Button>
-            <Button
-                Width="493"
-                Height="469"
-                Margin="528,0,0,0"
-                Background="{x:Null}"
-                Click="Button_Click_1"
-                Foreground="{x:Null}">
-                <Image
-                    Width="472"
-                    Height="472"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_1(b).png" />
-            </Button>
+            <Image
+                x:Name="Q1AIMG"
+                Width="400"
+                Height="400"
+                Margin="0,0,450,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q1_B.png" />
+            <Image
+                x:Name="Q1BIMG"
+                Width="400"
+                Height="400"
+                Margin="503,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q1_A.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="0" />
+                </Image.RenderTransform>
+            </Image>
             <Image
                 Width="346"
                 Height="158"
-                Margin="207,1695,0,0"
+                Margin="207,1745,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Source="/Images/Footer/Question_1.png" />
-        </Grid>
 
+        </Grid>
         <Grid
             x:Name="Question2"
             Opacity="0"
             Visibility="Visible">
+
             <Image
                 x:Name="Question2Correct"
-                Margin="583,710,106,762"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderTransformOrigin="0.5,0.5"
                 Source="/Images/GreenCircle.png"
-                Visibility="Collapsed" />
+                Visibility="Collapsed">
+                <Image.RenderTransform>
+                    <CompositeTransform
+                        ScaleX="0.4"
+                        ScaleY="0.4"
+                        TranslateX="250" />
+                </Image.RenderTransform>
+            </Image>
+            <Image Margin="112,775,938,1093" Source="/Images/Questions/A.png" />
+            <Image Margin="546,779,435,1107" Source="/Images/Questions/B.png" />
+
             <Image
-                Width="976"
-                Height="423"
-                Margin="57,239,0,0"
-                HorizontalAlignment="Left"
+                Margin="98,751,924,1069"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q2_BF.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="185" TranslateY="380" />
+                </Image.RenderTransform>
+            </Image>
+            <Image
+                Margin="562,784,451,1112"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q2_AT.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="190" TranslateY="380" />
+                </Image.RenderTransform>
+            </Image>
+            <Image
+                Width="829"
+                Height="359"
+                Margin="0,239,0,0"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Source="/Images/Text/Question_2.png" />
-            <Button
-                Width="493"
-                Height="469"
-                Margin="57,714,0,0"
-                VerticalAlignment="Top"
-                Background="{x:Null}"
-                Click="Button_Click_2"
-                Foreground="{x:Null}">
-                <Image
-                    Width="446"
-                    Height="446"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_2(a).png" />
-            </Button>
-            <Button
-                Width="493"
-                Height="469"
-                Margin="528,714,0,0"
-                VerticalAlignment="Top"
-                Background="{x:Null}"
-                Click="Button_Click_2"
-                Foreground="{x:Null}">
-                <Image
-                    Width="446"
-                    Height="446"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_2(b).png" />
-            </Button>
             <Image
-                Width="320"
-                Height="173"
-                Margin="207,1676,0,0"
+                x:Name="Q2AIMG"
+                Width="400"
+                Height="400"
+                Margin="0,0,450,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q2_A.png" />
+            <Image
+                x:Name="Q2BIMG"
+                Width="400"
+                Height="400"
+                Margin="503,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q2_B.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="0" />
+                </Image.RenderTransform>
+            </Image>
+            <Image
+                Width="336"
+                Height="153"
+                Margin="203,1698,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Source="/Images/Footer/Question_2.png" />
-        </Grid>
 
+        </Grid>
         <Grid
             x:Name="Question3"
             Opacity="0"
             Visibility="Visible">
+
             <Image
                 x:Name="Question3Correct"
-                Margin="575,713,98,741"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderTransformOrigin="0.5,0.5"
                 Source="/Images/GreenCircle.png"
-                Visibility="Collapsed" />
+                Visibility="Collapsed">
+                <Image.RenderTransform>
+                    <CompositeTransform
+                        ScaleX="0.4"
+                        ScaleY="0.4"
+                        TranslateX="250" />
+                </Image.RenderTransform>
+            </Image>
+            <Image Margin="112,775,938,1093" Source="/Images/Questions/A.png" />
+            <Image Margin="546,779,435,1107" Source="/Images/Questions/B.png" />
+
+            <Image
+                Margin="84,727,910,1045"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q3_B1.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="185" TranslateY="380" />
+                </Image.RenderTransform>
+            </Image>
+            <Image
+                Margin="558,782,447,1110"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q3_A1.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="190" TranslateY="380" />
+                </Image.RenderTransform>
+            </Image>
             <Image
                 Width="829"
                 Height="359"
-                Margin="57,239,0,0"
-                HorizontalAlignment="Left"
+                Margin="0,239,0,0"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Source="/Images/Text/Question_3.png" />
-            <Button
-                Width="466"
-                Height="469"
-                Margin="57,0,0,0"
-                Background="{x:Null}"
-                Click="Button_Click_3"
-                Foreground="{x:Null}">
-                <Image
-                    Width="428"
-                    Height="472"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_3(a).png" />
-            </Button>
-            <Button
-                Width="493"
-                Height="469"
-                Margin="528,0,0,0"
-                Background="{x:Null}"
-                Click="Button_Click_3"
-                Foreground="{x:Null}">
-                <Image
-                    Width="472"
-                    Height="472"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Source="/Images/Answer_3(b).png" />
-            </Button>
             <Image
-                Width="346"
-                Height="158"
-                Margin="207,1695,0,0"
+                x:Name="Q3AIMG"
+                Width="400"
+                Height="400"
+                Margin="0,0,450,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q3_B.png" />
+            <Image
+                x:Name="Q3BIMG"
+                Width="400"
+                Height="400"
+                Margin="503,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsDoubleTapEnabled="False"
+                IsHoldingEnabled="False"
+                IsRightTapEnabled="False"
+                IsTapEnabled="False"
+                RenderTransformOrigin="0.5,0.5"
+                Source="/Images/Questions/Q3_A.png">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="0" />
+                </Image.RenderTransform>
+            </Image>
+            <Image
+                Width="306"
+                Height="139"
+                Margin="208,1705,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Source="/Images/Footer/Question_3.png" />
+
         </Grid>
 
+        <Button
+            x:Name="Q1_A"
+            Width="466"
+            Height="469"
+            Margin="0,0,500,0"
+            HorizontalAlignment="Center"
+            Background="#02C5C5C5"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_1"
+            FocusVisualPrimaryBrush="#00000000"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+        <Button
+            x:Name="Q1_B"
+            Width="493"
+            Height="469"
+            Margin="528,0,0,0"
+            HorizontalAlignment="Center"
+            Background="#02C3C3C3"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_1"
+            FocusVisualPrimaryBrush="Transparent"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+
+        <Button
+            x:Name="Q2_A"
+            Width="466"
+            Height="469"
+            Margin="0,0,500,0"
+            HorizontalAlignment="Center"
+            Background="#02C5C5C5"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_2"
+            FocusVisualPrimaryBrush="#00000000"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+        <Button
+            x:Name="Q2_B"
+            Width="493"
+            Height="469"
+            Margin="528,0,0,0"
+            HorizontalAlignment="Center"
+            Background="#02C3C3C3"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_2"
+            FocusVisualPrimaryBrush="Transparent"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+
+        <Button
+            x:Name="Q3_A"
+            Width="466"
+            Height="469"
+            Margin="0,0,500,0"
+            HorizontalAlignment="Center"
+            Background="#02C5C5C5"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_3"
+            FocusVisualPrimaryBrush="#00000000"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+        <Button
+            x:Name="Q3_B"
+            Width="493"
+            Height="469"
+            Margin="528,0,0,0"
+            HorizontalAlignment="Center"
+            Background="#02C3C3C3"
+            BorderBrush="{x:Null}"
+            Canvas.ZIndex="5"
+            Click="Button_Click_3"
+            FocusVisualPrimaryBrush="Transparent"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+
+        <MediaElement
+            x:Name="Correct"
+            AutoPlay="False"
+            Source="/Assets/Audio/Correct.wav"
+            Visibility="Collapsed" />
+
     </Grid>
+
 </Page>

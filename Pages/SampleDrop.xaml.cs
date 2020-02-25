@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,16 @@ namespace _200201_MY_YellowLead_UWP
         public SampleDrop()
         {
             this.InitializeComponent();
+
+            LaunchDropApp();
+        }
+
+        private async void LaunchDropApp()
+        {
+            AppCommunicator.LaunchDropApp();
+
+            await Task.Delay(5000);
+            Frame.Navigate(typeof(Questions));
         }
     }
 }

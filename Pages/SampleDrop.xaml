@@ -10,16 +10,29 @@
     Background="White"
     mc:Ignorable="d">
 
-    <Grid Width="1080" Height="1920">
-        <Image VerticalAlignment="Bottom" Source="/Images/BG.jpg" />
-        <Image VerticalAlignment="Bottom" Source="/Images/Footer/Footer.png" />
-        <Image Margin="62,291,62,1319" Source="/Images/Text/Collect_Sample.png" />
+    <Grid
+        Width="1080"
+        Height="1920"
+        Background="White">
         <Image
-            Width="260"
-            Height="1060"
-            Margin="0,601,0,0"
+            Height="1956"
+            Margin="0,0,0,0"
+            VerticalAlignment="Center"
+            Source="/Images/BG.jpg" />
+        <Image
+            Width="1100"
+            Height="502"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Source="/Images/Footer/Footer.png" />
+        <Image Margin="-3,213,-3,1355" Source="/Images/Text/Collect_Sample.png" />
+        <Image Margin="367,521,367,643" Source="/Images/PediasurePack.png" />
+        <Image
+            Width="256"
+            Height="326"
+            Margin="0,1283,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Source="/Assets/Win(Loop).gif" />
+            Source="/Images/Collect_Sample/Down(1)(Loop).gif" />
     </Grid>
 </Page>

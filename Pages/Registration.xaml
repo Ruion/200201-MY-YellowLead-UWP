@@ -610,12 +610,14 @@
                                     </VisualState>
                                     <VisualState x:Name="PointerOver">
                                         <Storyboard>
+                                            <!--
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderElement" Storyboard.TargetProperty="BorderBrush">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource TextControlBorderBrushPointerOver}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderElement" Storyboard.TargetProperty="Background">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource TextControlBackgroundPointerOver}" />
                                             </ObjectAnimationUsingKeyFrames>
+                                            -->
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PlaceholderTextContentPresenter" Storyboard.TargetProperty="Foreground">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding PlaceholderForeground, RelativeSource={RelativeSource Mode=TemplatedParent}, TargetNullValue={ThemeResource TextControlPlaceholderForegroundPointerOver}}" />
                                             </ObjectAnimationUsingKeyFrames>
@@ -693,19 +695,24 @@
             Source="/Images/Header/PediasureLogo.png" />
 
         <Border
+            x:Name="NameBorder"
             Width="766"
             Margin="0,409,0,1380"
             HorizontalAlignment="Center"
             Background="#66DEDEDE"
+            BorderBrush="#FF2AD319"
             CornerRadius="60,60,60,60">
             <TextBox
                 x:Name="nameField"
                 Width="542"
+                Height="97"
+                Margin="0,40,0,0"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
+                VerticalAlignment="Top"
                 Background="#00000000"
                 BorderBrush="{x:Null}"
                 FocusVisualPrimaryBrush="{x:Null}"
+                FontFamily="Brandon Grotesque Regular"
                 FontSize="38"
                 Foreground="Black"
                 PlaceholderForeground="#FF424242"
@@ -716,20 +723,25 @@
                 TextWrapping="Wrap" />
         </Border>
         <Border
+            x:Name="EmailBorder"
             Width="758"
-            Margin="0,619,0,1170"
+            Margin="0,569,0,1220"
             HorizontalAlignment="Center"
             Background="#66DEDEDE"
+            BorderBrush="#FFD31919"
             CornerRadius="60,60,60,60">
             <TextBox
                 x:Name="emailField"
                 Width="542"
+                Height="97"
+                Margin="0,40,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 extensions:TextBoxRegex.ValidationType="Email"
                 Background="#00000000"
                 BorderBrush="{x:Null}"
                 FocusVisualPrimaryBrush="{x:Null}"
+                FontFamily="Brandon Grotesque Regular"
                 FontSize="38"
                 Foreground="Black"
                 PlaceholderForeground="#FF424242"
@@ -739,20 +751,25 @@
                 TextWrapping="Wrap" />
         </Border>
         <Border
+            x:Name="ContactBorder"
             Width="765"
-            Margin="0,829,0,960"
+            Margin="0,731,0,1058"
             HorizontalAlignment="Center"
             Background="#66DEDEDE"
+            BorderBrush="#FFD31919"
             CornerRadius="60,60,60,60">
             <TextBox
                 x:Name="contactField"
                 Width="542"
+                Height="97"
+                Margin="0,40,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 extensions:TextBoxRegex.ValidationType="PhoneNumber"
                 Background="#00000000"
                 BorderBrush="{x:Null}"
                 FocusVisualPrimaryBrush="{x:Null}"
+                FontFamily="Brandon Grotesque Regular"
                 FontSize="38"
                 Foreground="Black"
                 PlaceholderForeground="#FF424242"
@@ -762,54 +779,125 @@
                 TextWrapping="Wrap" />
         </Border>
 
-
-        <Button
-            x:Name="submitButton"
-            Width="423"
-            Height="125"
-            Margin="0,1342,0,0"
+        <Image
+            x:Name="SubmitIMG"
+            Width="452"
+            Height="160"
+            Margin="0,800,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Background="#FF651693"
-            Click="submitButton_Click"
-            Content="SUBMIT"
-            CornerRadius="30"
-            FontSize="56"
-            FontWeight="Bold"
-            Opacity="0.5" />
+            VerticalAlignment="Center"
+            Opacity="0.5"
+            RenderTransformOrigin="0.5,0.5"
+            Source="/Images/But_Submit.png">
+            <Image.RenderTransform>
+                <CompositeTransform ScaleX="1" ScaleY="1" />
+            </Image.RenderTransform>
+        </Image>
+
         <Image
             x:Name="ConsentTextImage"
-            Width="822"
-            Height="298"
-            Margin="260,1000,0,0"
+            Width="762"
+            Height="340"
+            Margin="171,897,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Source="/Images/PDPA_text.png" />
         <Image
-            Margin="0,1427,0,0"
-            VerticalAlignment="Top"
+            Width="1100"
+            Height="502"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
             Source="/Images/Footer/Footer.png" />
         <Rectangle
             x:Name="checkboxBackground"
             Width="50"
             Height="50"
-            Margin="193,1014,0,0"
+            Margin="106,910,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FF5C0B88"
             Visibility="Collapsed" />
 
         <Button
-            x:Name="checkbox"
+            x:Name="CheckboxBorder"
             Width="50"
             Height="50"
-            Margin="193,1014,0,0"
+            Margin="106,910,0,0"
             VerticalAlignment="Top"
             Background="{x:Null}"
             BorderBrush="#FF5C0B88"
             BorderThickness="4,4,4,4"
-            Click="checkbox_Click"
             Content="" />
+
+        <Button
+            x:Name="Checkbox"
+            Width="150"
+            Height="150"
+            Margin="56,860,0,0"
+            VerticalAlignment="Top"
+            Background="#02000000"
+            BorderBrush="{x:Null}"
+            BorderThickness="4,4,4,4"
+            Click="checkbox_Click"
+            Content=""
+            Style="{StaticResource Button}" />
+
+        <MediaElement
+            x:Name="Click"
+            AutoPlay="False"
+            Source="/Assets/Audio/Click.wav"
+            Visibility="Collapsed" />
+
+        <Button
+            x:Name="submitButton"
+            Width="482"
+            Height="173"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#02FFFFFF"
+            BorderBrush="{x:Null}"
+            Click="submitButton_Click"
+            CornerRadius="30"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            FontFamily="Brandon Grotesque Regular"
+            FontSize="56"
+            FontWeight="Bold"
+            Foreground="{x:Null}"
+            Opacity="0.5"
+            RenderTransformOrigin="0.5,0.5"
+            Style="{StaticResource Button}">
+            <Button.RenderTransform>
+                <CompositeTransform TranslateY="400" />
+            </Button.RenderTransform>
+
+        </Button>
+
+        <Grid
+            x:Name="WarningBox"
+            Margin="298,521,298,1163"
+            Background="#BFFFFFFF"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Visibility="Collapsed">
+            <TextBlock
+                x:Name="WarningMessage"
+                Width="406"
+                Height="131"
+                Margin="0,82,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                FocusVisualPrimaryBrush="{x:Null}"
+                FocusVisualSecondaryBrush="{x:Null}"
+                FontSize="25"
+                Foreground="#FFB21414"
+                SelectionHighlightColor="{x:Null}"
+                Text="invalid message"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+        </Grid>
+
     </Grid>
+
 
 </Page>

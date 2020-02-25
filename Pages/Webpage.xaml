@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="_200201_MY_YellowLead_UWP.Pages.Webpage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:_200201_MY_YellowLead_UWP.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="1080"
+    Height="1920"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid Height="1920" Background="White">
+        <WebView x:Name="PediasureWebsite" />
+
+        <Image
+            x:Name="FreeSampleIMG"
+            Width="172"
+            Height="172"
+            Margin="0,0,750,1250"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            RenderTransformOrigin="0.5,0.5"
+            Source="/Images/But_FreeSample.png" />
+        <Button
+            x:Name="FreeSampleButton"
+            Width="180"
+            Height="180"
+            Margin="74,239,0,0"
+            VerticalAlignment="Top"
+            Background="#02999999"
+            BorderBrush="{x:Null}"
+            Click="FreeSampleButton_Click"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Foreground="{x:Null}"
+            Style="{StaticResource Button}" />
+        <MediaElement
+            x:Name="Click"
+            AutoPlay="False"
+            Source="/Assets/Audio/Click.wav"
+            Visibility="Collapsed" />
+    </Grid>
+</Page>

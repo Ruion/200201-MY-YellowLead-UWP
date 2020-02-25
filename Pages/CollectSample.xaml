@@ -11,17 +11,70 @@
     mc:Ignorable="d">
 
     <Grid Width="1080" Height="1920">
-        <Button
-            x:Name="collectButton"
-            Width="800"
-            Height="168"
-            Margin="0,1240,0,0"
+        <Image
+            Height="1954"
+            Margin="-9,0,-9,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Source="/Images/BG.jpg" />
+
+        <Image
+            Width="1100"
+            Height="502"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            Source="/Images/Footer/Footer_CollectSample.png" />
+
+
+        <Image
+            Width="934"
+            Height="934"
+            Margin="0,266,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Background="#FF651693"
-            Content="COLLECT SAMPLE"
+            Source="/Images/Collect_Sample/Img_CollectSample.png" />
+        <Image
+            Width="494"
+            Height="494"
+            Margin="521,161,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/Text/Collect_Sample2.png" />
+        <Image
+            x:Name="CollectSampleIMG"
+            Width="802"
+            Height="168"
+            Margin="0,1176,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.5,0.5"
+            Source="/Images/But_Sample.png" />
+        <Button
+            x:Name="collectButton"
+            Width="964"
+            Height="218"
+            Margin="0,1151,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#02B4B4B4"
+            BorderBrush="{x:Null}"
+            Click="collectButton_Click"
             CornerRadius="30"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}"
+            FontFamily="Brandon Grotesque Regular"
             FontSize="66"
-            FontWeight="Bold" />
+            FontWeight="Bold"
+            Foreground="{x:Null}"
+            RenderTransformOrigin="0.5,0.5"
+            Style="{StaticResource Button}" />
+        <MediaElement
+            x:Name="Click"
+            AutoPlay="False"
+            Source="/Assets/Audio/Click.wav"
+            Visibility="Collapsed" />
     </Grid>
 </Page>
