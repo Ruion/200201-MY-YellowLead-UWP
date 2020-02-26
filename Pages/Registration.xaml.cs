@@ -39,6 +39,10 @@ namespace _200201_MY_YellowLead_UWP
         private bool emailDuplicate;
         private bool contactDuplicate;
 
+        string mailPattern = @"^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$";
+        string PhonePattern = @"^6?01\d{8,9}$";
+
+
         public Registration()
         {
             this.InitializeComponent();
@@ -79,7 +83,7 @@ namespace _200201_MY_YellowLead_UWP
 
         private void contactField_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Match c = Regex.Match(contactField.Text, @"^(01)[0-46-9]*[0-9]{7,8}$");
+            Match c = Regex.Match(contactField.Text, PhonePattern);
             if (c.Success)
             {
                 contactValid = true;
@@ -116,7 +120,7 @@ namespace _200201_MY_YellowLead_UWP
 
         private void emailField_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Match em = Regex.Match(emailField.Text, @"^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$");
+            Match em = Regex.Match(emailField.Text, mailPattern);
             if (em.Success)
             {
                 emailValid = true;
