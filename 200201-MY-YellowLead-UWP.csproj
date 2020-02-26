@@ -26,7 +26,7 @@
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <AppInstallerUri>C:\UID_Projects\200201-MY-YellowLead-UWP\200201-MY-YellowLead-UWP\Publish</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>79F432F3F5D97089714098E01973A4E14B7BE512</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>B31806197E53CBA175D9D1CF23CAD78967C2321A</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -165,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppLauncher.exe" />
-    <Content Include="AppLauncher.pdb" />
     <Content Include="Assets\h1.jpg" />
     <Content Include="Assets\h2.jpg" />
     <Content Include="Assets\h3.jpg" />

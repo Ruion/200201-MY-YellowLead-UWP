@@ -11,7 +11,6 @@ namespace _200201_MY_YellowLead_UWP
 {
     public class AppCommunicator
     {
-
         public static void LaunchAutoSyncApp()
         {
             WriteTextToFile("AppLaunchNumber.txt", "0");
@@ -38,7 +37,6 @@ namespace _200201_MY_YellowLead_UWP
             WriteTextToFile("AppLaunchNumber.txt", "3");
 
             LaunchCommunicatorApp();
-
         }
 
         public static void ExitAllApp()
@@ -46,7 +44,6 @@ namespace _200201_MY_YellowLead_UWP
             WriteTextToFile("AppLaunchNumber.txt", "4");
 
             LaunchCommunicatorApp();
-
         }
 
         public static async void WriteLinesToFile(string fileName, string[] fileLines)
@@ -67,8 +64,8 @@ namespace _200201_MY_YellowLead_UWP
         {
             StorageFolder folder = await KnownFolders.DocumentsLibrary.GetFolderAsync("200201-MY-YellowLead");
             StorageFile file = await folder.GetFileAsync(fileName);
-           IList<string> istring = await FileIO.ReadLinesAsync(file);
-           stringList.AddRange(istring.ToList<string>());
+            IList<string> istring = await FileIO.ReadLinesAsync(file);
+            stringList.AddRange(istring.ToList<string>());
         }
 
         private static async void LaunchCommunicatorApp()
@@ -77,7 +74,5 @@ namespace _200201_MY_YellowLead_UWP
                 await Windows.ApplicationModel.FullTrustProcessLauncher.
                     LaunchFullTrustProcessForCurrentAppAsync();
         }
-
-        
     }
 }

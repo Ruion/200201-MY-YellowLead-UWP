@@ -24,13 +24,13 @@ namespace _200201_MY_YellowLead_UWP
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
-        /// 
+        ///
 
         public App()
         {
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             this.InitializeComponent();
-         //   SystemNavigationManagerPreview.GetForCurrentView().CloseRequested += App_CloseRequested;
+            //   SystemNavigationManagerPreview.GetForCurrentView().CloseRequested += App_CloseRequested;
         }
 
         /// <summary>
@@ -67,9 +67,9 @@ namespace _200201_MY_YellowLead_UWP
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                   // rootFrame.Navigate(typeof(Pages.Webpage), e.Arguments);
-                //    rootFrame.Navigate(typeof(Registration), e.Arguments);
-                   rootFrame.Navigate(typeof(MasterPage), e.Arguments);
+                    // rootFrame.Navigate(typeof(Pages.Webpage), e.Arguments);
+                    //    rootFrame.Navigate(typeof(Registration), e.Arguments);
+                    rootFrame.Navigate(typeof(MasterPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -81,7 +81,7 @@ namespace _200201_MY_YellowLead_UWP
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
-        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        private void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
@@ -108,9 +108,8 @@ namespace _200201_MY_YellowLead_UWP
         private async void App_CloseRequested(object sender, SystemNavigationCloseRequestedPreviewEventArgs e)
         {
             var deferral = e.GetDeferral();
-           
-           
-            AppCommunicator.ExitAllApp();
+
+            await System.Threading.Tasks.Task.Run(() => { AppCommunicator.ExitAllApp(); });
             deferral.Complete();
         }
     }
