@@ -48,9 +48,20 @@ namespace _200201_MY_YellowLead_UWP
             this.InitializeComponent();
 
             FetchExistingData();
+
+            emailField.TextChanged += EmailField_TextChanged;
         }
 
-        
+        private void EmailField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (emailField.Text.Contains(" "))
+            {
+                emailField.Text = emailField.Text.Replace(" ", "");
+                emailField.Select(emailField.Text.Length, 0);
+            }
+        }
+
+
         private async void FetchExistingData()
         {
             List<string> existingEmailList_ = new List<string>();

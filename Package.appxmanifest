@@ -11,8 +11,8 @@
 
   <Identity
     Name="352f618e-6466-4e28-86b4-83dbed961b18"
-    Publisher="CN=UID-Asher"
-    Version="1.0.24.0" />
+    Publisher="CN=UID - Carmen"
+    Version="1.0.26.0" />
 
   <mp:PhoneIdentity PhoneProductId="352f618e-6466-4e28-86b4-83dbed961b18" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

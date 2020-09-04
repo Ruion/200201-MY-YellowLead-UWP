@@ -26,7 +26,8 @@
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <AppInstallerUri>C:\UID_Projects\200201-MY-YellowLead-UWP\200201-MY-YellowLead-UWP\Publish</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>B31806197E53CBA175D9D1CF23CAD78967C2321A</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>6DFE25DBF81581D3F46DBA5089EA1324DED5FD2C</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
